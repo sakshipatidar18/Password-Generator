@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password genrator</title>
+    <link rel="stylesheet" href="bubber.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+        <div class="password-generator">
+            <input readonly placeholder="PASSWORD" class="display" data-passworddispaly>
+            <button data-copy id="pehla-button">
+                <span data-copied class="tooltip"></span>
+                <img src="duplicate.png" alt="copy" width="23" height="23">
+            </button>
+        </div>
+        <div class="input-container">
+            <div class="length-contaner">
+                <p id="length">Password length</p>
+                <p data-length id="data">0</p>
+            </div>
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthslider onmousemove="">
+            <div class="check">
+                <input type="checkbox" id="upperCase">
+                <label for="Uppercase">Include Uppercase latter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowerCase">
+                <label for="lowercase">Include Lowercase latter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+            <div class="strength-container">
+                <p class="strength">Strength</p>
+                <div data-indicator class="indicator"></div>
+            </div>
+            <button class="generatebtn">Generate Password</button>
+        </div>
+    </div>
+    <script src="generator.js"></script>
+</body>
+
+</html>
